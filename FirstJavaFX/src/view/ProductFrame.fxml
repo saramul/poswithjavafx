@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="frame_product" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.202-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProductController">
+   <children>
+      <TableView fx:id="tb_product" layoutX="14.0" layoutY="14.0" prefHeight="301.0" prefWidth="800.0" AnchorPane.bottomAnchor="169.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="col_id" prefWidth="150.0" resizable="false" sortable="false" text="ID" />
+          <TableColumn fx:id="col_name" prefWidth="350.0" resizable="false" sortable="false" text="Product Name" />
+            <TableColumn fx:id="col_price" prefWidth="150.0" resizable="false" sortable="false" text="Price" />
+            <TableColumn fx:id="col_amount" prefWidth="150.0" resizable="false" sortable="false" text="Amount" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="txt_id" editable="false" labelFloat="true" layoutX="27.0" layoutY="328.0" prefHeight="26.0" prefWidth="145.0" promptText="Product ID" />
+      <JFXTextField fx:id="txt_name" labelFloat="true" layoutX="193.0" layoutY="328.0" prefHeight="26.0" prefWidth="271.0" promptText="Product Name" />
+      <JFXTextField fx:id="txt_price" labelFloat="true" layoutX="477.0" layoutY="328.0" prefHeight="26.0" prefWidth="157.0" promptText="Product Price" />
+      <JFXTextField fx:id="txt_amount" labelFloat="true" layoutX="645.0" layoutY="328.0" prefHeight="26.0" prefWidth="130.0" promptText="Product Amount" />
+      <JFXButton fx:id="btn_add" buttonType="RAISED" layoutX="85.0" layoutY="395.0" onAction="#insertProduct" prefHeight="44.0" prefWidth="139.0" style="-fx-background-color: #000;" text="Insert" textFill="#fffdfe">
+         <graphic>
+            <FontAwesomeIconView fill="#f5eff4" glyphName="SAVE" size="16" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btn_update" buttonType="RAISED" disable="true" layoutX="240.0" layoutY="395.0" onAction="#updateProduct" prefHeight="44.0" prefWidth="139.0" style="-fx-background-color: #000;" text="Update" textFill="#fffdfe">
+         <graphic>
+            <FontAwesomeIconView fill="#f5eff4" glyphName="REFRESH" size="16" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btn_delete" buttonType="RAISED" disable="true" layoutX="393.0" layoutY="395.0" onAction="#deleteProduct" prefHeight="44.0" prefWidth="139.0" style="-fx-background-color: #000;" text="Delete" textFill="#fffdfe">
+         <graphic>
+            <FontAwesomeIconView fill="#f5eff4" glyphName="BITBUCKET" size="16" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btn_clear" buttonType="RAISED" layoutX="545.0" layoutY="395.0" onAction="#clearData" prefHeight="44.0" prefWidth="139.0" style="-fx-background-color: #000;" text="CLEAR" textFill="#fffdfe">
+         <graphic>
+            <FontAwesomeIconView fill="#f5eff4" glyphName="SHARE" size="16" />
+         </graphic>
+      </JFXButton>
+   </children>
+   <padding>
+      <Insets left="5.0" right="5.0" top="5.0" />
+   </padding>
+</AnchorPane>
