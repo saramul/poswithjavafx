@@ -1,6 +1,9 @@
 package controller;
 
 import java.io.IOException;
+import java.util.Map;
+
+import org.apache.commons.collections.map.HashedMap;
 
 import com.jfoenix.controls.JFXButton;
 
@@ -12,8 +15,16 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
+import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.view.JasperViewer;
+import util.MySQLHelper;
 
 public class PointOfSaleSystemController {
+	
+	@FXML
+    private JFXButton toolbar_print;
 
     @FXML
     private JFXButton toolbar_product;
@@ -58,5 +69,18 @@ public class PointOfSaleSystemController {
 		return pane;
 	}
 
-    
+	@FXML
+    void printProduct(ActionEvent event) {
+		String print_product = "src/report/report_product.jasper";
+		Map map = new HashedMap();
+		
+		try {
+			JasperPrint jp = JasperFillManager.fillReport(print_product, map, MySQLHelper.openDB());
+			JasperViewer jv = new JasperViewer(jp, false);
+			jv.setVisible(true);
+		} catch (JRException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    }
 }

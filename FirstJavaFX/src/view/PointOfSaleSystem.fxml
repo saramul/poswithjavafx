@@ -48,6 +48,11 @@
                               <FontAwesomeIconView glyphName="PRODUCT_HUNT" size="16" />
                            </graphic>
                         </JFXButton>
+                        <JFXButton fx:id="toolbar_print" buttonType="RAISED" onAction="#printProduct" prefHeight="40.0" prefWidth="120.0" text="Print">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="PRINT" size="16" />
+                           </graphic>
+                        </JFXButton>
                         <JFXButton fx:id="toolbar_exit" buttonType="RAISED" onAction="#closeProgram" prefHeight="40.0" prefWidth="120.0" styleClass="menu" stylesheets="@../css/style.css" text="Exit">
                            <graphic>
                               <FontAwesomeIconView glyphName="CLOSE" size="16" />

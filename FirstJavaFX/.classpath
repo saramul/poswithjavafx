@@ -6,5 +6,13 @@
 	<classpathentry kind="lib" path="libs/fontawesomefx-8.9.jar"/>
 	<classpathentry kind="lib" path="libs/jfoenix-8.0.8.jar"/>
 	<classpathentry kind="lib" path="libs/mysql-connector-java-8.0.17.jar"/>
+	<classpathentry kind="lib" path="libs/commons-beanutils-1.8.2.jar"/>
+	<classpathentry kind="lib" path="libs/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="libs/commons-digester-2.1.jar"/>
+	<classpathentry kind="lib" path="libs/commons-logging-1.1.jar"/>
+	<classpathentry kind="lib" path="libs/groovy-all-2.0.1.jar"/>
+	<classpathentry kind="lib" path="libs/iText-2.1.7.js2.jar"/>
+	<classpathentry kind="lib" path="libs/jasperreports-5.6.0.jar"/>
+	<classpathentry kind="lib" path="libs/log4j-1.2.15.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
